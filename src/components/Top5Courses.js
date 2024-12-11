@@ -61,7 +61,7 @@ const Top5Courses = (props) => {
             <Link
               to="/login"
               className="btn btn-primary"
-              style={{ padding: "1rem 3rem", fontSize: "1.1rem" }}
+              style={{ fontSize: "1rem", padding: "0.5rem 3rem" }}
             >
               立即登入
             </Link>
