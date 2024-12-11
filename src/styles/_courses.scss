@@ -1,0 +1,42 @@
+.courseComponent {
+  .card {
+    width: 15rem;
+    height: 20rem;
+    overflow: hidden;
+    .img-container {
+      height: 10rem;
+      width: 15rem;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+    }
+    .card-body {
+      p {
+        margin-bottom: 0.4rem;
+      }
+      padding: 0.5rem;
+      .card-title {
+        height: 2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .teacherName {
+        font-size: 0.8rem;
+      }
+      .rating {
+        font-size: 0.6rem;
+        line-height: 5px;
+        margin-bottom: 0.4rem;
+      }
+      .enrollPrice {
+        color: orangered;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.course-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.all-courses {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.8s ease-in, opacity 0.6s ease;
+}
+
+.all-courses.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@import "./search";
+@import "./courses";

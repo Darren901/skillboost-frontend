@@ -1,0 +1,90 @@
+.carousel-img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 20%;
+  left: 15% !important;
+  text-align: left !important;
+  h1 {
+    font-size: 4rem;
+    font-family: "Carter One", system-ui;
+    background: linear-gradient(90deg, $secondary-color, red);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  h4 {
+    font-size: 1.25rem;
+    color: rgb(82, 82, 82) !important;
+    margin-left: 0.5rem;
+  }
+  button {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 0;
+  }
+}
+
+.carousel-caption {
+  h1 {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  h4 {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1s ease forwards;
+    animation-delay: 0.7s;
+  }
+
+  button {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1s ease forwards;
+    animation-delay: 1.2s;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.homeCarousel {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.homeCarousel.loaded {
+  opacity: 1;
+}
+
+@media (max-width: 1350px) {
+  .carousel-caption {
+    left: 1rem !important;
+  }
+}
+
+@media (max-width: 416px) {
+  .carousel-caption {
+    text-align: center !important;
+    h1 {
+      font-size: 4rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.75rem 3rem;
+    }
+  }
+}

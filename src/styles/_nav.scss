@@ -1,0 +1,13 @@
+.navText {
+  color: $text-color !important;
+  transition: color 0.3s ease !important;
+  font-weight: 500 !important;
+  &:hover {
+    color: $secondary-color !important;
+  }
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.25em 0.4em;
+}

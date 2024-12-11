@@ -1,0 +1,177 @@
+.addNewCourse {
+  min-height: 93.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+
+  .newCourseBox {
+    height: auto;
+    max-height: 90vh;
+    width: 1250px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+    .addNewCourseImage {
+      background-image: url("../images/teach.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 45%;
+      min-height: 800px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    .newCourseForm {
+      background-color: white;
+      width: 55%;
+      padding: 3rem 4rem;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        color: #2b2b2b;
+        font-size: 2rem;
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: #4a4a4a;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-control {
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+
+        &:focus {
+          box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+          border-color: #0d6efd;
+        }
+
+        &::placeholder {
+          color: #adb5bd;
+        }
+      }
+
+      textarea {
+        resize: none;
+        min-height: 150px;
+      }
+
+      .btn-primary {
+        padding: 0.8rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+        }
+      }
+
+      .mb-3 {
+        margin-bottom: 1.5rem !important;
+      }
+
+      input[type="file"] {
+        padding: 0.5rem;
+
+        &::file-selector-button {
+          padding: 0.5rem 1rem;
+          border-radius: 6px;
+          border: none;
+          background-color: #e9ecef;
+          margin-right: 1rem;
+          color: #4a4a4a;
+          font-weight: 500;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: #dee2e6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .addNewCourse .newCourseBox {
+    width: 95%;
+
+    .newCourseForm {
+      padding: 2rem 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .addNewCourse .newCourseBox {
+    .addNewCourseImage {
+      width: 40%;
+    }
+    .newCourseForm {
+      width: 60%;
+      padding: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .addNewCourse .newCourseBox {
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+
+    .addNewCourseImage {
+      display: none;
+    }
+
+    .newCourseForm {
+      width: 100%;
+      padding: 2rem;
+
+      h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

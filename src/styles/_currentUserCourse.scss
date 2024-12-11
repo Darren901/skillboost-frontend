@@ -1,0 +1,92 @@
+.userCourseImage {
+  height: 500px;
+  background-image: url(../images/Teacher.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  width: 100%;
+  .userCourseContent {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    h1 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.allUserCourses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+@media (max-width: 1193px) {
+  .userCourseImage {
+    .userCourseContent {
+      margin-top: 6rem; // 頂部間距減少
+      margin-left: 1rem; // 左側間距減少
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .userCourseImage {
+    height: 300px; // 小螢幕下高度減少
+    background-size: cover; // 適應螢幕寬度
+    background-position: top; // 改變背景圖片的對齊方式
+    .userCourseContent {
+      margin-top: 2rem; // 頂部間距減少
+      margin-left: 1rem; // 左側間距減少
+      .mdbCard {
+        transform: scale(0.7) !important;
+        transform-origin: top left !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .userCourseImage {
+    .userCourseContent {
+      h1 {
+        font-size: 1.5rem;
+      }
+      h4 {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+      }
+      .mdbCard {
+        transform: scale(0.5) !important;
+        transform-origin: top left !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .userCourseImage {
+    .userCourseContent {
+      h1 {
+        font-size: 1.25rem;
+      }
+      h4 {
+        font-size: 0.75rem;
+        margin: 0.5rem 0;
+      }
+      .mdbCard {
+        transform: scale(0.5) !important;
+        transform-origin: top left !important;
+      }
+    }
+  }
+  .userCourseTitle {
+    text-align: center;
+  }
+}

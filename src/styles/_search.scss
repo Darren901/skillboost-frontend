@@ -1,0 +1,26 @@
+.search {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  .search-group {
+    width: 80%;
+    input {
+      height: 3rem;
+      border-radius: 30px;
+    }
+    button {
+      font-size: 1.1rem;
+      width: 6rem;
+      border-radius: 30px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .search {
+    .search-group {
+      width: 330px;
+    }
+  }
+}
