@@ -10,14 +10,16 @@ const Top5Courses = (props) => {
   const cardRefs = useRef([]);
 
   useEffect(() => {
-    CourseService.findTop5Courses()
-      .then((data) => {
-        setCourseData(data.data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }, []);
+    if (currentUser && currentUser.foundUser) {
+      CourseService.findTop5Courses()
+        .then((data) => {
+          setCourseData(data.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }
+  }, [currentUser]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

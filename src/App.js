@@ -34,12 +34,14 @@ function App() {
           const count = response.data?.courses?.length || 0;
           setCartItemCount(count);
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          setCartItemCount(0);
         })
         .finally(() => {
           handleLoading(false);
         });
+    } else {
+      setCartItemCount(0);
     }
   }, [currentUser]);
 

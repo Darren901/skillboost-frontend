@@ -17,18 +17,22 @@ const AllCourses = (props) => {
   }, []);
 
   const findAllCourses = () => {
-    handleLoading(true);
-    CourseService.findAllCourse()
-      .then((data) => {
-        setCourseData(data.data);
-        setLoaded(true);
-      })
-      .catch((e) => {
-        navigate("/login");
-      })
-      .finally(() => {
-        handleLoading(false);
-      });
+    if (currentUser && currentUser.foundUser) {
+      handleLoading(true);
+      CourseService.findAllCourse()
+        .then((data) => {
+          setCourseData(data.data);
+          setLoaded(true);
+        })
+        .catch((e) => {
+          console.log(e);
+        })
+        .finally(() => {
+          handleLoading(false);
+        });
+    } else {
+      navigate("/login");
+    }
   };
 
   const handleSearch = () => {
