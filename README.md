@@ -29,9 +29,19 @@
 ### Others
 - RESTful API
 - 綠界金流串接
-- Netlify / Render 部署
+- Netlify / Render / MongoDB Altas 部署
 
 ## 📱 Screenshots
-![首頁](./images/homepage.png)
-![課程頁面](./images/course.png)
-![會員中心](./images/profile.png)
+![首頁](./skillboost-首頁)
+![課程頁面](./skillboost-課程總覽)
+![影音](./skill-boost影音)
+![留言板](./skill-boost留言板)
+
+## 👤 Demo Account
+### 導師帳號
+* 帳號：instructor1@gmail.com
+* 密碼：instructor1
+
+### 學生帳號
+* 帳號：student1@gmail.com
+* 密碼：student1
