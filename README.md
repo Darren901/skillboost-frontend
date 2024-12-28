@@ -32,10 +32,10 @@
 - Netlify / Render / MongoDB Altas 部署
 
 ## 📱 Screenshots
-![首頁](./skillboost-首頁)
-![課程頁面](./skillboost-課程總覽)
-![影音](./skill-boost影音)
-![留言板](./skill-boost留言板)
+![首頁](./skillboost-首頁.png)
+![課程頁面](./skillboost-課程總覽.png)
+![影音](./skill-boost影音.png)
+![留言板](./skill-boost留言板.png)
 
 ## 👤 Demo Account
 ### 導師帳號
